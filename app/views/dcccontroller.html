@@ -1,0 +1,103 @@
+<div class="page-header">
+	<h2 class="text-center">
+		DCC Controller <small>for rpiDCC</small>
+	</h2>
+</div>
+
+<div class="row">
+	<div class="col-xs-8">
+		<!-- Locomotive id view -->
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<h1 class="text-center">{{locomotive.id}}</h1>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-4">
+		<!-- Locomotive id control -->
+		<div class="panel panel-default">
+			<div class="panel-body text-center">
+				<div class="btn-group-vertical" role="group">
+					<button type="button" class="btn btn-default" ng-click="changeLocomotive(true);">UP</button>
+					<button type="button" class="btn btn-default" ng-click="changeLocomotive(false);">DOWN</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-xs-6">
+		<!-- Locomotive functions control -->
+		<div class="panel panel-default">
+			<div class="panel-heading text-center">Functions</div>
+			<div class="panel-body">
+				<div class="text-center" style="height: 300px;">
+					
+					<switcher 
+						id="fn0"
+						class="styled-switch"
+						ng-model="locomotive.functions[0]"
+						ng-disabled="locomotive.disabled"
+						ng-change="toggleFn(0, newValue, oldValue)"
+						false-label="<span class='glyphicon glyphicon-star' aria-hidden='true'></span>"
+						true-label="<span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span>">
+					</switcher>
+					<switcher 
+						id="fn1"
+						class="styled-switch"
+						ng-model="locomotive.functions[1]"
+						ng-disabled="locomotive.disabled"
+						ng-change="toggleFn(1, newValue, oldValue)"
+						false-label="<strong>F1</strong>"
+						true-label="<span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span>">
+					</switcher>
+					<switcher 
+						id="fn2"
+						class="styled-switch"
+						ng-model="locomotive.functions[2]"
+						ng-disabled="locomotive.disabled"
+						ng-change="toggleFn(2, newValue, oldValue)"
+						false-label="<strong>F2</strong>"
+						true-label="<span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span>">
+					</switcher>
+					<switcher 
+						id="fn3"
+						class="styled-switch"
+						ng-model="locomotive.functions[3]"
+						ng-disabled="locomotive.disabled"
+						ng-change="toggleFn(3, newValue, oldValue)"
+						false-label="<strong>F3</strong>"
+						true-label="<span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span>">
+					</switcher>
+					<switcher 
+						id="fn4"
+						class="styled-switch"
+						ng-model="locomotive.functions[4]"
+						ng-disabled="locomotive.disabled"
+						ng-change="toggleFn(4, newValue, oldValue)"
+						false-label="<strong>F4</strong>"
+						true-label="<span class='glyphicon glyphicon-ok-sign' aria-hidden='true'></span>">
+					</switcher>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-6">
+		<!-- Locomotive speed control -->
+		<div class="panel panel-default">
+			<div class="panel-heading text-center">Speed</div>
+			<div class="panel-body">
+				<div style="height: 300px;">
+					
+					<rzslider 
+						ng-disabled="locomotive.disabled"
+						rz-slider-model="locomotiveSpeedSlider.value"
+          				rz-slider-options="locomotiveSpeedSlider.options">
+          			</rzslider>
+          			
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

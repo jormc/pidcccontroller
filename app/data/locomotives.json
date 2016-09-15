@@ -1,0 +1,27 @@
+[
+ {
+	 "id": "1",
+	 "functions": [false, false, false, false, false],
+	 "disabled": false
+ },
+ {
+	 "id": "2",
+	 "functions": [false, false, false, false, false],
+	 "disabled": true
+ },
+ {
+	 "id": "3",
+	 "functions": [false, false, false, false, false],
+	 "disabled": true
+ },
+ {
+	 "id": "4",
+	 "functions": [false, false, false, false, false],
+	 "disabled": false
+ },
+ {
+	 "id": "5",
+	 "functions": [false, false, false, false, false],
+	 "disabled": true
+ }
+]
